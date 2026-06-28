@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influencer Profile — CreatorConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">CreatorConnect</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <section class="profile-section">
+    <div class="profile-card">
+
+      <div class="auth-header">
+        <h2>Build Your Influencer Profile</h2>
+        <p>This is what brands will see when they discover you</p>
+      </div>
+
+      <form id="influencer-form">
+        <div class="form-section">
+          <h3 class="form-section-title">Basic Information</h3>
+
+          <div class="form-group">
+            <label for="display-name">Display Name</label>
+            <input
+              type="text"
+              id="display-name"
+              name="display_name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea
+              id="bio"
+              name="bio"
+              rows="4"
+              placeholder="Tell brands who you are, what you create, and what makes you unique..."
+              required
+            ></textarea>
+
+          </div>
+
+          <div class="form-group">
+            <label for="category">Content Category / Niche</label>
+            <select id="category" name="category" required>
+              
+              <option value="">-- Select your niche --</option>
+              <option value="tech">Tech & Gaming</option>
+              <option value="fashion">Fashion & Beauty</option>
+              <option value="fitness">Fitness & Health</option>
+              <option value="food">Food & Cooking</option>
+              <option value="travel">Travel & Lifestyle</option>
+              <option value="finance">Finance & Business</option>
+              <option value="education">Education</option>
+              <option value="entertainment">Entertainment & Comedy</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+            >
+          </div>
+
+        </div>
+        <div class="form-section">
+          <h3 class="form-section-title">Social Media Handles</h3>
+          <p class="form-section-subtitle">Add at least one platform</p>
+
+          <div class="form-group">
+            <label for="instagram">Instagram Username</label>
+            <div class="input-prefix-wrapper">
+              <span class="input-prefix">@</span>
+              <input
+                type="text"
+                id="instagram"
+                name="instagram"
+                placeholder="yourusername"
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="youtube">YouTube Channel Name</label>
+            <div class="input-prefix-wrapper">
+              <span class="input-prefix">YT</span>
+              <input
+                type="text"
+                id="youtube"
+                name="youtube"
+                placeholder="Your Channel Name"
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="twitter">Twitter / X Username</label>
+            <div class="input-prefix-wrapper">
+              <span class="input-prefix">@</span>
+              <input
+                type="text"
+                id="twitter"
+                name="twitter"
+                placeholder="yourusername"
+              >
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-section">
+          <h3 class="form-section-title">Audience & Metrics</h3>
+          <p class="form-section-subtitle">Brands use these to evaluate fit</p>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="followers">Total Followers</label>
+              <input
+                type="number"
+                id="followers"
+                name="followers"
+                min="0"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+              <label for="engagement">Engagement Rate (%)</label>
+              <input
+                type="number"
+                id="engagement"
+                name="engagement_rate"
+                min="0"
+                max="100"
+                step="0.1"
+                required
+              >
+            </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="avg-likes">Average Likes per Post</label>
+              <input
+                type="number"
+                id="avg-likes"
+                name="avg_likes"
+                min="0"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="rate">Rate per Post (₹)</label>
+              <input
+                type="number"
+                id="rate"
+                name="rate_per_post"
+                min="0"
+              >
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="form-section">
+          <h3 class="form-section-title">Collaboration Preferences</h3>
+
+          <div class="form-group">
+            <label>Available for (select all that apply)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="collab_type" value="sponsored_post">
+                Sponsored Posts
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="collab_type" value="product_review">
+                Product Reviews
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="collab_type" value="brand_ambassador">
+                Brand Ambassador
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="collab_type" value="affiliate">
+                Affiliate Marketing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="collab_type" value="event_coverage">
+                Event Coverage
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="past-brands">Past Brand Collaborations</label>
+            <textarea
+              id="past-brands"
+              name="past_brands"
+              rows="3"
+            ></textarea>
+          </div>
+
+        </div>
+
+        <p class="error-msg" id="error-msg"></p>
+
+        <button type="submit" class="btn-primary btn-full">
+          Save Profile
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <script src="influencer-profile.js"></script>
+
+</body>
+</html>

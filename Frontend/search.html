@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Influencers — CreatorConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">CreatorConnect</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html" class="btn-outline">Log In</a>
+      <a href="signup.html" class="btn-primary">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="search-page">
+
+    <aside class="filters-panel">
+
+      <h3 class="filters-title">Filter Influencers</h3>
+
+      <div class="filter-group">
+        <label for="filter-niche">Niche / Category</label>
+        <select id="filter-niche">
+          <option value="all">All Categories</option>
+          <option value="tech">Tech & Gaming</option>
+          <option value="fashion">Fashion & Beauty</option>
+          <option value="fitness">Fitness & Health</option>
+          <option value="food">Food & Cooking</option>
+          <option value="travel">Travel & Lifestyle</option>
+          <option value="finance">Finance & Business</option>
+          <option value="education">Education</option>
+          <option value="entertainment">Entertainment & Comedy</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-followers">Minimum Followers</label>
+        <select id="filter-followers">
+          <option value="0">Any</option>
+          <option value="1000">1K+</option>
+          <option value="10000">10K+</option>
+          <option value="50000">50K+</option>
+          <option value="100000">100K+</option>
+          <option value="500000">500K+</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-engagement">Minimum Engagement Rate</label>
+        <select id="filter-engagement">
+          <option value="0">Any</option>
+          <option value="1">1%+</option>
+          <option value="3">3%+</option>
+          <option value="5">5%+</option>
+          <option value="8">8%+</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-budget">Max Rate per Post (₹)</label>
+        <select id="filter-budget">
+          <option value="999999">Any Budget</option>
+          <option value="5000">Under ₹5,000</option>
+          <option value="10000">Under ₹10,000</option>
+          <option value="25000">Under ₹25,000</option>
+          <option value="50000">Under ₹50,000</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-search">Search by Name</label>
+        <input
+          type="text"
+          id="filter-search"
+          placeholder="e.g. Geetesh..."
+        >
+      </div>
+
+      <button class="btn-primary btn-full" id="apply-filters">
+        Apply Filters
+      </button>
+
+      <button class="btn-outline btn-full filter-reset" id="reset-filters">
+        Reset
+      </button>
+
+    </aside>
+
+    <main class="results-area">
+
+      <div class="results-header">
+        <h2>Discover Influencers</h2>
+        <p id="results-count">Showing all influencers</p>
+      </div>
+
+      <div class="influencer-grid" id="influencer-grid">
+      </div>
+
+      <div class="no-results" id="no-results" style="display:none;">
+        <p>😕 No influencers match your filters.</p>
+        <p>Try adjusting your criteria.</p>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="search.js"></script>
+
+</body>
+</html>

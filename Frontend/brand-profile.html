@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Profile — CreatorConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">CreatorConnect</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+    </div>
+  </nav>
+
+  <section class="profile-section">
+    <div class="profile-card">
+
+      <div class="auth-header">
+        <h2>Build Your Brand Profile</h2>
+        <p>Tell influencers who you are and what you're looking for</p>
+      </div>
+
+      <form id="brand-form">
+        <div class="form-section">
+          <h3 class="form-section-title">Company Information</h3>
+
+          <div class="form-group">
+            <label for="company-name">Company Name</label>
+            <input
+              type="text"
+              id="company-name"
+              name="company_name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="industry">Industry</label>
+            <select id="industry" name="industry" required>
+              <option value="">-- Select your industry --</option>
+              <option value="fashion">Fashion & Apparel</option>
+              <option value="beauty">Beauty & Personal Care</option>
+              <option value="tech">Tech & Electronics</option>
+              <option value="food">Food & Beverage</option>
+              <option value="fitness">Fitness & Wellness</option>
+              <option value="finance">Finance & Fintech</option>
+              <option value="travel">Travel & Hospitality</option>
+              <option value="education">Education & E-learning</option>
+              <option value="gaming">Gaming</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="company-bio">Company Description</label>
+            <textarea
+              id="company-bio"
+              name="company_bio"
+              rows="4"
+              placeholder="Tell influencers what your brand stands for, your target audience, and your mission..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input
+                type="url"
+                id="website"
+                name="website"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="brand-location">Location</label>
+              <input
+                type="text"
+                id="brand-location"
+                name="location"
+              >
+            </div>
+          </div>
+
+        </div>
+        <div class="form-section">
+          <h3 class="form-section-title">Campaign Preferences</h3>
+          <p class="form-section-subtitle">Help influencers understand what you're looking for</p>
+
+          <div class="form-group">
+            <label for="target-niche">Target Influencer Niche</label>
+            <select id="target-niche" name="target_niche" required>
+              <option value="">-- What kind of creators do you want? --</option>
+              <option value="tech">Tech & Gaming</option>
+              <option value="fashion">Fashion & Beauty</option>
+              <option value="fitness">Fitness & Health</option>
+              <option value="food">Food & Cooking</option>
+              <option value="travel">Travel & Lifestyle</option>
+              <option value="finance">Finance & Business</option>
+              <option value="education">Education</option>
+              <option value="entertainment">Entertainment & Comedy</option>
+              <option value="any">Open to All</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="min-followers">Min. Followers Required</label>
+              <input
+                type="number"
+                id="min-followers"
+                name="min_followers"
+                min="0"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Budget per Campaign (₹)</label>
+              <input
+                type="number"
+                id="budget"
+                name="budget"
+                min="0"
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Looking for (select all that apply)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="campaign_type" value="sponsored_post">
+                Sponsored Posts
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="campaign_type" value="product_review">
+                Product Reviews
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="campaign_type" value="brand_ambassador">
+                Brand Ambassador
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="campaign_type" value="affiliate">
+                Affiliate Marketing
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="campaign_type" value="event_coverage">
+                Event Coverage
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <div class="form-section">
+          <h3 class="form-section-title">Brand Social Media</h3>
+          <p class="form-section-subtitle">Optional — helps influencers know your online presence</p>
+
+          <div class="form-group">
+            <label for="brand-instagram">Instagram</label>
+            <div class="input-prefix-wrapper">
+              <span class="input-prefix">@</span>
+              <input
+                type="text"
+                id="brand-instagram"
+                name="brand_instagram"
+                placeholder="yourbrand"
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="brand-twitter">Twitter / X</label>
+            <div class="input-prefix-wrapper">
+              <span class="input-prefix">@</span>
+              <input
+                type="text"
+                id="brand-twitter"
+                name="brand_twitter"
+                placeholder="yourbrand"
+              >
+            </div>
+          </div>
+
+        </div>
+
+        <p class="error-msg" id="error-msg"></p>
+
+        <button type="submit" class="btn-primary btn-full">
+          Save Brand Profile
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <script src="brand-profile.js"></script>
+
+</body>
+</html>

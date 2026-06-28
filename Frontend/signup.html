@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — CreatorConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">CreatorConnect</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="login.html" class="btn-outline">Log In</a>
+    </div>
+  </nav>
+
+  <section class="auth-section">
+
+    <div class="auth-card">
+
+      <div class="auth-header">
+        <h2>Create your account</h2>
+        <p>Join CreatorConnect as a brand or influencer</p>
+      </div>
+
+  
+      <div class="role-selector">
+
+        <button class="role-btn active" id="btn-brand" onclick="selectRole('brand')">
+          🏢 I'm a Brand
+        </button>
+        <button class="role-btn" id="btn-influencer" onclick="selectRole('influencer')">
+          ⭐ I'm an Influencer
+        </button>
+      </div>
+
+      <!-- THE FORM -->
+      <form id="signup-form">
+        <input type="hidden" id="role-input" value="brand">
+
+        <div class="form-group">
+
+          <label for="fullname">Full Name</label>
+
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="At least 8 characters"
+            required
+            minlength="8"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Repeat your password"
+            required
+          >
+        </div>
+
+        <p class="error-msg" id="error-msg"></p>
+
+        <button type="submit" class="btn-primary btn-full">Create Account</button>
+
+      </form>
+
+      <p class="auth-footer">
+        Already have an account? <a href="login.html">Log in</a>
+      </p>
+
+    </div>
+  </section>
+
+  <script src="signup.js"></script>
+
+</body>
+</html>
